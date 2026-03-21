@@ -1,15 +1,15 @@
 Hey there, I'm so glad you're here!
 
-Welcome to my little corner of GitHub! I'm Nakul — a Business Analytics and Strategy enthusiast who gets genuinely excited about turning raw data into decisions that actually matter. I'm passionate about growing in my career, cracking business problems, and making operations a little less chaotic (and a lot more fun).
+Welcome to my little corner of GitHub! I'm Nakul - a Business Analytics ,Operations and Strategy enthusiast who gets genuinely excited about turning raw data into decisions that actually matter. I'm passionate about growing in my career, cracking business problems, and making operations a little less chaotic (and a lot more fun).
 
 Here, you'll find:
 * 📈 Projects in Business Analytics, Operations & Product strategy I'm building
 * 🧠 Things I've learned juggling SQL, dashboards, GTM funnels & real business challenges
-* 🌱 Bits of inspiration for anyone trying to survive — and thrive — in the corporate jungle
+* 🌱 Bits of inspiration for anyone trying to survive - and thrive - in the corporate jungle
 
-Whether you're here to explore my work, get inspired, or just see how someone else is figuring it all out — you're in the right place! 🫶
+Whether you're here to explore my work, get inspired, or just see how someone else is figuring it all out - you're in the right place! 🫶
 
-Let's connect, learn, and grow together — one repo at a time. You bring the problem, I'll bring the data 🍪📊
+Let's connect, learn, and grow together 🍪📊
 
 ---
 
@@ -43,4 +43,7 @@ Let's connect, learn, and grow together — one repo at a time. You bring the pr
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 ![CapCut](https://img.shields.io/badge/CapCut-000000?style=for-the-badge&logo=capcut&logoColor=white)
 ![PowerPoint](https://img.shields.io/badge/PowerPoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white)
-[nakulchaturvedi.work@gmail.com](mailto:nakulchaturvedi.work@gmail.com) · [LinkedIn](#) · 7427841731
+
+[nakulchaturvedi.work@gmail.com](mailto:nakulchaturvedi.work@gmail.com)
+[LinkedIn](#)
+
