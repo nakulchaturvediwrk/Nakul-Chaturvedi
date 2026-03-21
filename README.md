@@ -45,5 +45,5 @@ Let's connect, learn, and grow together 🍪📊
 ![PowerPoint](https://img.shields.io/badge/PowerPoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white)
 
 [nakulchaturvedi.work@gmail.com](mailto:nakulchaturvedi.work@gmail.com)
-[LinkedIn](#)
+[LinkedIn](https://www.linkedin.com/in/nakul-chaturvedi-142588248/)
 
