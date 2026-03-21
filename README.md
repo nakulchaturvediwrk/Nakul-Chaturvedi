@@ -26,6 +26,14 @@ and pushing 7-day activation rates up with SQL + structured root-cause work.
 
 `HubSpot Revenue Operations`   `PMI Operations Management`   `Lean Six Sigma`   `CFI Financial Analysis & Modeling`
 
+Tech Stack:
+![SQL](https://img.shields.io/badge/SQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![HubSpot](https://img.shields.io/badge/HubSpot-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+
 ### 📫 Let's connect
 
 Open to **Analytics · Ops · RevOps · Product** roles and internships.
