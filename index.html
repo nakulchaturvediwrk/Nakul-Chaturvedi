@@ -107,7 +107,7 @@
   .stage-block { position: absolute; top: 0; right: 0; width: 78%; height: 78%; background: var(--blue); border: var(--border);
     animation: jolt 2.4s steps(1) infinite; }
   @keyframes jolt { 0% { transform: translate(0,0); } 25% { transform: translate(4px,-3px); } 50% { transform: translate(-2px,3px); } 75% { transform: translate(3px,2px); } }
-  .photo-frame { position: relative; aspect-ratio: 4 / 5; border: var(--border); background: var(--surface); box-shadow: 10px 10px 0 var(--ink); overflow: hidden;
+  .photo-frame { container-type: inline-size; position: relative; aspect-ratio: 4 / 5; border: var(--border); background: var(--surface); box-shadow: 10px 10px 0 var(--ink); overflow: hidden;
     opacity: 0; animation: frameIn .6s steps(1) forwards .35s; }
   @keyframes frameIn {
     0% { opacity: 0; clip-path: inset(100% 0 0 0); }
@@ -122,7 +122,8 @@
   .stage:hover .photo-frame img { filter: none; }
   .monogram { display: none; position: absolute; inset: 0; align-items: center; justify-content: center;
     background: var(--blue-soft); background-image: radial-gradient(var(--blue) 1.4px, transparent 1.6px); background-size: 14px 14px; }
-  .monogram span { font-family: var(--f-display); font-weight: 700; font-size: 140px; line-height: 1; letter-spacing: -.06em; background: var(--paper); border: var(--border); padding: 12px 22px; box-shadow: 8px 8px 0 var(--ink); }
+  .monogram span { font-family: var(--f-display); font-weight: 700; font-size: 11cqw; line-height: .95; letter-spacing: -.04em; text-transform: uppercase; background: var(--paper); border: var(--border); padding: 18px 20px; box-shadow: 8px 8px 0 var(--ink); transform: rotate(-3deg); max-width: 90%; text-align: left; }
+  .monogram em { font-style: normal; color: var(--blue); }
   .no-photo .monogram { display: flex; }
   .frame-tag { position: absolute; left: 0; right: 0; bottom: 0; background: var(--ink); color: #fff; font-family: var(--f-mono); font-size: var(--t-xs); font-weight: 700; padding: 6px 10px; display: flex; align-items: center; gap: 8px; }
   .rec { width: 8px; height: 8px; border-radius: 50%; background: #FF5A4E; animation: blink 1s steps(1) infinite; }
@@ -165,9 +166,9 @@
   }
   @media (max-width: 640px) {
     .stage { padding: 20px 18px 70px; }
-    .s1 { left: -2%; } .s2 { right: -2%; top: 26%; } .s3 { left: auto; right: -2%; top: 46%; } .s4 { display: none; }
+    .s1 { left: -2%; } .s2 { right: -2%; top: 26%; } .s3, .s4 { display: none; }
     .mini-card { left: 0; width: 72%; }
-    .monogram span { font-size: 96px; }
+    .monogram span { font-size: 11cqw; }
     .hero-stats .v { font-size: var(--t-h3); }
     .flipboard { height: 34px; } .flip-track span { height: 32px; line-height: 32px; font-size: var(--t-xs); }
     @keyframes flip {
@@ -275,7 +276,7 @@
     <figure class="photo-frame">
       <img src="assets/nakul.jpg" alt="Nakul Chaturvedi" width="800" height="1000"
            onerror="this.remove();document.querySelector('.photo-frame').classList.add('no-photo')">
-      <div class="monogram" aria-hidden="true"><span>NC</span></div>
+      <div class="monogram" aria-hidden="true"><span>Nakul<br><em>Chaturvedi</em></span></div>
       <figcaption class="frame-tag"><span class="rec"></span>NAKUL_CHATURVEDI.JPG</figcaption>
     </figure>
 
