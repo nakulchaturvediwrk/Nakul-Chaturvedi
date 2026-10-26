@@ -35,7 +35,7 @@
   .co a { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-color: var(--blue); }
   .co a:hover { color: var(--blue); }
   .cert { display: flex; flex-direction: column; gap: var(--s3); }
-  .cert .issuer { font-family: var(--f-display); font-weight: 700; font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .cert .issuer { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: calc(var(--s3) * -1); font-family: var(--f-display); font-weight: 700; font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
   .cert .num { font-family: var(--f-mono); font-weight: 700; font-size: var(--t-h2); line-height: 1; color: var(--blue); }
   .cert .link { margin-top: auto; }
   .cert:hover .num { animation: flipnum .4s steps(4); }
@@ -511,42 +511,50 @@
     <a class="btn btn-dark" href="https://www.notion.so/30506bd5730b801b8414f764b97221d6?v=30506bd5730b804f808e000c6fb90fd7" target="_blank" rel="noopener">Open my Notion library ↗</a></div>
   <div class="grid g4">
     <a class="card hover cert reveal" href="https://www.notion.so/Advanced-SQL-for-Data-Analytics-30506bd5730b80f98983c98abf98665f" target="_blank" rel="noopener">
-      <div class="row between"><span class="num">01</span><span class="issuer">DataCamp</span></div>
+      <span class="num">01</span>
+      <span class="issuer" title="DataCamp">DataCamp</span>
       <h3 class="t-h3">Advanced SQL for Data Analytics</h3>
       <span class="link">View certificate →</span>
     </a>
     <a class="card hover cert reveal" href="https://www.notion.so/Business-Analytics-and-Data-Visualization-with-Power-BI-30506bd5730b806d846ef6e74a9fb4dd" target="_blank" rel="noopener">
-      <div class="row between"><span class="num">02</span><span class="issuer">Microsoft</span></div>
+      <span class="num">02</span>
+      <span class="issuer" title="Microsoft">Microsoft</span>
       <h3 class="t-h3">Business Analytics &amp; Data Visualization with Power BI</h3>
       <span class="link">View certificate →</span>
     </a>
     <a class="card hover cert reveal" href="https://www.notion.so/Power-BI-Business-Intelligence-for-Beginners-to-Advance-d4fb51330c974b6b933d415c64a0e269" target="_blank" rel="noopener">
-      <div class="row between"><span class="num">03</span><span class="issuer">Udemy · Biztics</span></div>
+      <span class="num">03</span>
+      <span class="issuer" title="Udemy · Biztics">Udemy · Biztics</span>
       <h3 class="t-h3">Power BI: Business Intelligence, Beginner to Advanced</h3>
       <span class="link">View certificate →</span>
     </a>
     <a class="card hover cert reveal" href="https://www.notion.so/CFI-Financial-Analysis-and-Modeling-Professional-Certificate-7f93e20a2e5e4ba59b564e5cc6d59fbe" target="_blank" rel="noopener">
-      <div class="row between"><span class="num">04</span><span class="issuer">CFI · LinkedIn Learning</span></div>
+      <span class="num">04</span>
+      <span class="issuer" title="CFI · LinkedIn Learning">CFI · LinkedIn Learning</span>
       <h3 class="t-h3">Financial Analysis &amp; Modeling Professional Certificate</h3>
       <span class="link">View certificate →</span>
     </a>
     <a class="card hover cert reveal" href="https://www.notion.so/Six-Sigma-Black-Belt-5c862a4b7faf47cab0614969ebc1ede7" target="_blank" rel="noopener">
-      <div class="row between"><span class="num">05</span><span class="issuer">LinkedIn Learning</span></div>
+      <span class="num">05</span>
+      <span class="issuer" title="LinkedIn Learning">LinkedIn Learning</span>
       <h3 class="t-h3">Six Sigma: Black Belt</h3>
       <span class="link">View certificate →</span>
     </a>
     <a class="card hover cert reveal" href="https://www.notion.so/Operations-Management-Professional-Certificate-a0db8caf793146ad880b25cde86bbea8" target="_blank" rel="noopener">
-      <div class="row between"><span class="num">06</span><span class="issuer">Jack Welch Management Institute</span></div>
+      <span class="num">06</span>
+      <span class="issuer" title="Jack Welch Management Institute">Jack Welch Mgmt Institute</span>
       <h3 class="t-h3">Operations Management Professional Certificate</h3>
       <span class="link">View certificate →</span>
     </a>
     <a class="card hover cert reveal" href="https://www.notion.so/HubSpot-Revenue-Operations-Certification-31506bd5730b8080b040e5caafb9796b" target="_blank" rel="noopener">
-      <div class="row between"><span class="num">07</span><span class="issuer">HubSpot Academy</span></div>
+      <span class="num">07</span>
+      <span class="issuer" title="HubSpot Academy">HubSpot Academy</span>
       <h3 class="t-h3">HubSpot Revenue Operations Certification</h3>
       <span class="link">View certificate →</span>
     </a>
     <a class="card blue cert reveal" href="https://www.notion.so/30506bd5730b801b8414f764b97221d6?v=30506bd5730b804f808e000c6fb90fd7" target="_blank" rel="noopener">
       <span class="num" style="color:#fff">+</span>
+      <span class="issuer" style="color:#D5DDFF">Notion</span>
       <h3 class="t-h3">See the full library</h3>
       <p class="t-sm muted">Every certificate with notes on what I learned, kept up to date in Notion.</p>
       <span class="link" style="color:#fff">Open Notion →</span>
