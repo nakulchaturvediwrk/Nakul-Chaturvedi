@@ -40,9 +40,149 @@
   .vs ul { margin-top: var(--s4); }
   .contact-big { font-family: var(--f-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.03em; font-size: clamp(28px, 6vw, 64px); line-height: 1.05; word-break: break-word; }
   .contact-big a:hover { color: #9DB1FF; }
-  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+  /* ---------- Stop-motion scroll reveals (choppy on purpose) ---------- */
+  .reveal { opacity: 0; transform: translate(-6px, 18px) rotate(-.6deg); transition: opacity .45s steps(4), transform .45s steps(4); }
   .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  .reveal .bar > i { width: 0 !important; transition: width .9s steps(9) .2s; }
+  .reveal.in .bar > i { width: var(--w, 100%) !important; }
+  .xp .pos { transition: color .3s steps(3); }
+  .xp.in .pos { animation: flipnum .5s steps(5) both; }
+  @keyframes flipnum { 0% { transform: rotateX(90deg); } 100% { transform: none; } }
+
+  /* Scroll progress */
+  .progress { position: fixed; top: 0; left: 0; height: 4px; width: 100%; background: var(--blue); transform-origin: 0 50%; transform: scaleX(0); z-index: 60; }
+
+  /* ---------- HERO v2 ---------- */
+  .hero2 { position: relative; overflow: hidden; padding-top: var(--s8);
+    background-image: radial-gradient(var(--line-soft) 1.2px, transparent 1.2px); background-size: 22px 22px; }
+  .hero2 .hero-grid { grid-template-columns: 1.1fr 1fr; }
+  .hero-copy > * + * { margin-top: var(--s5); }
+  .h-stack .drop { display: block; }
+
+  /* Stop-motion drop-in: lands in 4 hard frames, overshoots, settles */
+  .drop, .sm-pop { opacity: 0; animation: slam .5s steps(1) forwards; animation-delay: calc(var(--d) * .14s + .15s); }
+  @keyframes slam {
+    0%   { opacity: 0; transform: translateY(-40px) rotate(-3deg); }
+    25%  { opacity: 1; transform: translateY(-14px) rotate(2deg); }
+    50%  { opacity: 1; transform: translateY(6px) rotate(-1deg); }
+    75%  { opacity: 1; transform: translateY(-2px) rotate(.5deg); }
+    100% { opacity: 1; transform: none; }
+  }
+
+  /* Hand-drawn boiling underline: 3 frames swapped like stop motion */
+  .scribble-wrap { position: relative; display: inline-block !important; }
+  .scribble { position: absolute; left: 0; right: 0; bottom: -10px; width: 100%; height: 18px; overflow: visible; }
+  .scribble path { fill: none; stroke: var(--ink); stroke-width: 5; stroke-linecap: round; opacity: 0; }
+  .scribble .f1 { animation: boil 0.36s steps(1) infinite; }
+  .scribble .f2 { animation: boil 0.36s steps(1) infinite .12s; }
+  .scribble .f3 { animation: boil 0.36s steps(1) infinite .24s; }
+  @keyframes boil { 0% { opacity: 1; } 33.3% { opacity: 0; } }
+
+  /* Flip-board role ticker */
+  .flip-line { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap; }
+  .flipboard { display: inline-block; height: 40px; overflow: hidden; border: var(--border); background: var(--ink); color: #fff; padding: 0 var(--s3); }
+  .flip-track { display: flex; flex-direction: column; animation: flip 12.5s steps(1) infinite; }
+  .flip-track span { height: 38px; line-height: 38px; font-family: var(--f-mono); font-weight: 700; font-size: var(--t-sm); text-transform: uppercase; white-space: nowrap; }
+  .flip-track span::after { content: "_"; color: var(--blue); animation: blink .8s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes flip {
+    0%, 18% { transform: translateY(0); }
+    20%, 38% { transform: translateY(-38px); }
+    40%, 58% { transform: translateY(-76px); }
+    60%, 78% { transform: translateY(-114px); }
+    80%, 98% { transform: translateY(-152px); }
+    100% { transform: translateY(-190px); }
+  }
+
+  .hero-stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border: var(--border); background: var(--surface); max-width: 520px; }
+  .hero-stats > div { padding: var(--s3) var(--s4); }
+  .hero-stats > div + div { border-left: var(--border); }
+  .hero-stats .v { font-family: var(--f-mono); font-weight: 700; font-size: var(--t-h2); line-height: var(--lh-h2); letter-spacing: -.03em; }
+
+  .nudge svg { animation: nudge 1.2s steps(2) infinite; }
+  @keyframes nudge { 50% { transform: translateX(4px); } }
+
+  /* Photo stage */
+  .stage { position: relative; max-width: 460px; width: 100%; justify-self: center; padding: 28px 28px 80px; }
+  .stage-block { position: absolute; top: 0; right: 0; width: 78%; height: 78%; background: var(--blue); border: var(--border);
+    animation: jolt 2.4s steps(1) infinite; }
+  @keyframes jolt { 0% { transform: translate(0,0); } 25% { transform: translate(4px,-3px); } 50% { transform: translate(-2px,3px); } 75% { transform: translate(3px,2px); } }
+  .photo-frame { position: relative; aspect-ratio: 4 / 5; border: var(--border); background: var(--surface); box-shadow: 10px 10px 0 var(--ink); overflow: hidden;
+    opacity: 0; animation: frameIn .6s steps(1) forwards .35s; }
+  @keyframes frameIn {
+    0% { opacity: 0; clip-path: inset(100% 0 0 0); }
+    20% { opacity: 1; clip-path: inset(75% 0 0 0); }
+    40% { clip-path: inset(50% 0 0 0); }
+    60% { clip-path: inset(25% 0 0 0); }
+    80% { clip-path: inset(6% 0 0 0); }
+    100% { opacity: 1; clip-path: inset(0 0 0 0); }
+  }
+  .photo-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+    filter: grayscale(1) contrast(1.1); transition: filter .4s steps(4); }
+  .stage:hover .photo-frame img { filter: none; }
+  .monogram { display: none; position: absolute; inset: 0; align-items: center; justify-content: center;
+    background: var(--blue-soft); background-image: radial-gradient(var(--blue) 1.4px, transparent 1.6px); background-size: 14px 14px; }
+  .monogram span { font-family: var(--f-display); font-weight: 700; font-size: 140px; line-height: 1; letter-spacing: -.06em; background: var(--paper); border: var(--border); padding: 12px 22px; box-shadow: 8px 8px 0 var(--ink); }
+  .no-photo .monogram { display: flex; }
+  .frame-tag { position: absolute; left: 0; right: 0; bottom: 0; background: var(--ink); color: #fff; font-family: var(--f-mono); font-size: var(--t-xs); font-weight: 700; padding: 6px 10px; display: flex; align-items: center; gap: 8px; }
+  .rec { width: 8px; height: 8px; border-radius: 50%; background: #FF5A4E; animation: blink 1s steps(1) infinite; }
+
+  /* Stickers: slap on, then idle "boil" like stop-motion paper cutouts */
+  .sticker { position: absolute; z-index: 3; font-family: var(--f-display); font-weight: 700; font-size: var(--t-xs); letter-spacing: .06em; text-transform: uppercase;
+    padding: 8px 12px; border: var(--border); box-shadow: 3px 3px 0 var(--ink); white-space: nowrap; opacity: 0;
+    animation: slap .4s steps(1) forwards, wobble 1.1s steps(1) infinite; animation-delay: calc(var(--d) * .14s + .2s), calc(var(--d) * .14s + .7s); }
+  .sticker:hover { animation-play-state: paused; }
+  .s1 { top: 6%; left: -6%; background: var(--ink); color: #fff; --r: -6deg; }
+  .s2 { top: 32%; right: -8%; background: var(--surface); --r: 5deg; }
+  .s3 { top: 55%; left: -10%; background: var(--blue); color: #fff; --r: -3deg; }
+  .s4 { top: 72%; right: -4%; background: var(--amber-soft); color: var(--amber); border-color: var(--ink); --r: 4deg; }
+  @keyframes slap {
+    0% { opacity: 0; transform: scale(2.2) rotate(calc(var(--r) * 3)); }
+    33% { opacity: 1; transform: scale(1.4) rotate(calc(var(--r) * -1)); }
+    66% { opacity: 1; transform: scale(.92) rotate(var(--r)); }
+    100% { opacity: 1; transform: scale(1) rotate(var(--r)); }
+  }
+  @keyframes wobble {
+    0% { opacity: 1; transform: rotate(var(--r)); }
+    33% { opacity: 1; transform: rotate(calc(var(--r) + 1.2deg)) translateY(-1px); }
+    66% { opacity: 1; transform: rotate(calc(var(--r) - .8deg)) translateX(1px); }
+  }
+
+  .mini-card { position: absolute; z-index: 4; left: -4%; bottom: 0; width: 62%; background: var(--surface); border: var(--border); box-shadow: 6px 6px 0 var(--ink); padding: var(--s3) var(--s4);
+    opacity: 0; animation: slam .5s steps(1) forwards; animation-delay: calc(var(--d) * .14s + .15s); }
+  .mini-card .bar > i { width: 0; animation: fill 1s steps(10) forwards; animation-delay: 2.3s; }
+  @keyframes fill { to { width: var(--w); } }
+
+  .scroll-cue { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .scroll-cue span { font-family: var(--f-display); font-weight: 700; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .scroll-cue i { width: 2px; height: 22px; background: var(--ink); animation: cue 1.2s steps(3) infinite; transform-origin: top; }
+  @keyframes cue { 0% { transform: scaleY(.2); } 50% { transform: scaleY(1); } 100% { transform: scaleY(.2) translateY(20px); } }
+
+  @media (max-width: 960px) {
+    .hero2 .hero-grid { grid-template-columns: 1fr; }
+    .stage { max-width: 380px; margin-top: var(--s4); }
+    .scroll-cue { display: none; }
+  }
+  @media (max-width: 640px) {
+    .stage { padding: 20px 18px 70px; }
+    .s1 { left: -2%; } .s2 { right: -2%; top: 26%; } .s3 { left: auto; right: -2%; top: 46%; } .s4 { display: none; }
+    .mini-card { left: 0; width: 72%; }
+    .monogram span { font-size: 96px; }
+    .hero-stats .v { font-size: var(--t-h3); }
+    .flipboard { height: 34px; } .flip-track span { height: 32px; line-height: 32px; font-size: var(--t-xs); }
+    @keyframes flip {
+      0%, 18% { transform: translateY(0); } 20%, 38% { transform: translateY(-32px); } 40%, 58% { transform: translateY(-64px); }
+      60%, 78% { transform: translateY(-96px); } 80%, 98% { transform: translateY(-128px); } 100% { transform: translateY(-160px); }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal, .drop, .sm-pop, .sticker, .mini-card, .photo-frame { opacity: 1 !important; transform: none; clip-path: none; }
+    .sticker { transform: rotate(var(--r)); }
+    .mini-card .bar > i, .reveal .bar > i { width: var(--w) !important; }
+    .scribble .f1 { opacity: 1; }
+  }
   @media (max-width: 640px) {
     .xp { grid-template-columns: minmax(0, 1fr); gap: var(--s2); padding: var(--s5) 0; }
     .xp .pos { font-size: var(--t-h2); }
@@ -52,6 +192,7 @@
 </style>
 </head>
 <body>
+<div class="progress" aria-hidden="true"></div>
 
 <header class="header"><div class="container">
   <a class="logo" href="#top" aria-label="Nakul Chaturvedi home">
@@ -86,46 +227,74 @@
 <main id="top">
 
 <!-- HERO -->
-<section class="hero"><div class="container hero-grid">
-  <div class="stack-lg">
-    <span class="badge blue">Open to Business Analyst &amp; Product roles</span>
-    <h1 class="t-display">Ops brain.<br>Data hands.<br><span class="accent">Builder energy.</span></h1>
-    <p class="lead">I'm Nakul. NIT Surat grad who skipped the civil engineering track to work next to founders. I dig into funnels with SQL, build the dashboards teams actually open, and automate the boring stuff with n8n and AI. Now heading into Business Analyst work, with Product as the long game.</p>
-    <div class="row">
-      <a class="btn btn-primary btn-lg" href="#contact">Let's talk
+<section class="hero hero2"><div class="container hero-grid">
+  <div class="hero-copy">
+    <span class="badge blue sm-pop" style="--d:0">● Open to Business Analyst &amp; Product roles</span>
+
+    <h1 class="t-display h-stack" aria-label="Ops brain. Data hands. Builder energy.">
+      <span class="drop" style="--d:1" aria-hidden="true">Ops brain.</span>
+      <span class="drop" style="--d:2" aria-hidden="true">Data hands.</span>
+      <span class="drop accent scribble-wrap" style="--d:3" aria-hidden="true">Builder energy.
+        <svg class="scribble" viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true">
+          <path class="f1" d="M2 12 C 60 4, 120 16, 180 8 S 270 6, 298 11"/>
+          <path class="f2" d="M3 10 C 70 15, 130 4, 190 11 S 268 13, 297 7"/>
+          <path class="f3" d="M2 9 C 55 13, 125 6, 185 13 S 265 4, 298 10"/>
+        </svg>
+      </span>
+    </h1>
+
+    <div class="flip-line drop" style="--d:4">
+      <span class="label muted">Right now I'm</span>
+      <span class="flipboard" aria-live="off"><span class="flip-track">
+        <span>running founder's office</span>
+        <span>building n8n automations</span>
+        <span>shipping dashboards</span>
+        <span>digging into SQL</span>
+        <span>building Rank Culture</span>
+        <span>running founder's office</span>
+      </span></span>
+    </div>
+
+    <p class="lead drop" style="--d:5">I'm Nakul. NIT Surat grad who skipped the civil track to work next to founders. Now I run tech and ops at a real estate + influencer media company, and I'm heading into Business Analyst work with Product as the long game.</p>
+
+    <div class="row drop" style="--d:6">
+      <a class="btn btn-primary btn-lg nudge" href="#contact">Let's talk
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-lg" href="#work">See my work</a>
     </div>
-    <div class="row t-sm muted" style="gap:var(--s5)">
-      <span>✓ Founder's office x3</span><span>✓ SQL · Power BI · n8n</span><span>✓ Mumbai, open to metros</span>
+
+    <div class="hero-stats drop" style="--d:7">
+      <div><div class="v"><span data-count="30">30</span>%</div><div class="t-xs muted">activation lift</div></div>
+      <div><div class="v"><span data-count="10">10</span>k+</div><div class="t-xs muted">rows in churn model</div></div>
+      <div><div class="v"><span data-count="100">100</span>+</div><div class="t-xs muted">customers acquired</div></div>
     </div>
   </div>
 
-  <div class="card card-lg proof-card">
-    <div class="card-head">
-      <span class="label muted">Live proof card</span>
-      <span class="badge dark">Verified on work</span>
-    </div>
-    <div class="t-h3">Nakul Chaturvedi</div>
-    <div class="t-sm muted mt1">B.Tech, NIT Surat · Founder's Office · Analytics &amp; Ops</div>
+  <div class="stage" aria-label="Photo of Nakul Chaturvedi">
+    <div class="stage-block" aria-hidden="true"></div>
+    <figure class="photo-frame">
+      <img src="assets/nakul.jpg" alt="Nakul Chaturvedi" width="800" height="1000"
+           onerror="this.remove();document.querySelector('.photo-frame').classList.add('no-photo')">
+      <div class="monogram" aria-hidden="true"><span>NC</span></div>
+      <figcaption class="frame-tag"><span class="rec"></span>NAKUL_CHATURVEDI.JPG</figcaption>
+    </figure>
 
-    <div class="score mt3"><span class="num" data-count="30">30</span><span class="of">% lift</span></div>
-    <div class="label blue mt1">7-day activation · DhanXpert</div>
+    <span class="sticker s1" style="--d:8">#1 Founder's office</span>
+    <span class="sticker s2" style="--d:9">NIT Surat '26</span>
+    <span class="sticker s3" style="--d:10">↑ 30% activation</span>
+    <span class="sticker s4" style="--d:11">⚡ n8n + Claude</span>
 
-    <div class="stack mt3">
-      <div class="label muted">Self-rated / 100</div>
-      <div class="skill-row"><span class="t-sm">SQL &amp; funnel analysis</span><span class="mono t-sm">95</span><div class="bar blue"><i style="width:95%"></i></div></div>
-      <div class="skill-row"><span class="t-sm">Dashboards (Power BI, HTML)</span><span class="mono t-sm">92</span><div class="bar"><i style="width:92%"></i></div></div>
-      <div class="skill-row"><span class="t-sm">AI automation (n8n, Claude API)</span><span class="mono t-sm">90</span><div class="bar"><i style="width:90%"></i></div></div>
-    </div>
-
-    <div class="proof-row mt3">
-      <div><div class="v">10k+</div><div class="t-xs muted">records in churn model</div></div>
-      <div><div class="v">~80%</div><div class="t-xs muted">churn model accuracy</div></div>
-      <div><div class="v">100+</div><div class="t-xs muted">vehicles on my dashboards</div></div>
+    <div class="mini-card" style="--d:12">
+      <div class="row between"><span class="label muted">Proof card</span><span class="badge dark">Verified</span></div>
+      <div class="skill-row mt2"><span class="t-xs">SQL &amp; funnels</span><span class="mono t-xs">95</span><div class="bar blue thin"><i style="--w:95%"></i></div></div>
+      <div class="skill-row mt1"><span class="t-xs">Dashboards</span><span class="mono t-xs">92</span><div class="bar thin"><i style="--w:92%"></i></div></div>
+      <div class="skill-row mt1"><span class="t-xs">AI automation</span><span class="mono t-xs">90</span><div class="bar thin"><i style="--w:90%"></i></div></div>
+      <div class="t-xs muted mt1">Self-rated / 100</div>
     </div>
   </div>
-</div></section>
+</div>
+<div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+</section>
 
 <!-- MARQUEE -->
 <div class="marquee" aria-hidden="true"><div>
@@ -346,12 +515,36 @@
     links.forEach(function (a, i) { a.classList.toggle("active", i === cur); });
   }, { passive: true });
 
-  // Count-up on hero score
-  var n = document.querySelector("[data-count]");
-  if (n && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    var end = +n.getAttribute("data-count"), t0 = null;
+  var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Odometer count-up in choppy frames (stop-motion feel), after the hero lands
+  if (!still) document.querySelectorAll("[data-count]").forEach(function (n) {
+    var end = +n.getAttribute("data-count"), frames = 12, f = 0;
     n.textContent = "0";
-    requestAnimationFrame(function step(t) { if (!t0) t0 = t; var p = Math.min((t - t0) / 900, 1); n.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); });
+    setTimeout(function tick() {
+      f++; n.textContent = Math.round(end * (1 - Math.pow(1 - f / frames, 3)));
+      if (f < frames) setTimeout(tick, 70);
+    }, 1400);
+  });
+
+  // Scroll progress bar
+  var bar = document.querySelector(".progress");
+  if (bar) window.addEventListener("scroll", function () {
+    var h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = "scaleX(" + (h > 0 ? scrollY / h : 0) + ")";
+  }, { passive: true });
+
+  // Photo parallax tilt that snaps in steps (desktop pointer only)
+  var stage = document.querySelector(".stage"), frame = document.querySelector(".photo-frame");
+  if (stage && frame && !still && matchMedia("(pointer:fine)").matches) {
+    stage.addEventListener("mousemove", function (e) {
+      var r = stage.getBoundingClientRect();
+      var x = Math.round(((e.clientX - r.left) / r.width - .5) * 4) * 2;
+      var y = Math.round(((e.clientY - r.top) / r.height - .5) * 4) * 2;
+      frame.style.transform = "translate(" + -x + "px," + -y + "px)";
+      frame.style.boxShadow = (10 + x) + "px " + (10 + y) + "px 0 var(--ink)";
+    });
+    stage.addEventListener("mouseleave", function () { frame.style.transform = ""; frame.style.boxShadow = ""; });
   }
 })();
 </script>
