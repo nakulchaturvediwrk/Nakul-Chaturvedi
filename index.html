@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nakul Chaturvedi · Business Analyst &amp; Product</title>
+<meta name="description" content="Nakul Chaturvedi. NIT Surat grad, founder's office operator, building toward Business Analyst and Product roles. SQL, Power BI, n8n and AI automation. Building Rank Culture.">
+<meta property="og:title" content="Nakul Chaturvedi · Business Analyst &amp; Product">
+<meta property="og:description" content="Ops operator who turns messy data into decisions. SQL, Power BI, AI automation. Building Rank Culture.">
+<meta property="og:image" content="assets/rank-culture.png">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
+  .hero h1 .accent { color: var(--blue); }
+  .proof-card { box-shadow: 10px 10px 0 var(--ink); }
+  .proof-card .card-head .badge { white-space: nowrap; }
+  .proof-row { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border: var(--border); }
+  .proof-row > div { padding: var(--s4); }
+  .proof-row > div + div { border-left: var(--border); }
+  .proof-row .v { font-family: var(--f-mono); font-weight: 700; font-size: var(--t-h2); line-height: var(--lh-h2); letter-spacing: -0.03em; }
+  .xp > * { min-width: 0; }
+  .xp { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: var(--s5); padding: var(--s6) 0; border-bottom: var(--border-thin); }
+  .xp:last-child { border-bottom: 0; }
+  .xp .pos { font-family: var(--f-mono); font-weight: 700; font-size: var(--t-h1); line-height: 1; color: var(--line-soft); }
+  .xp:first-child .pos { color: var(--blue); }
+  .xp ul { list-style: none; display: grid; gap: var(--s2); margin-top: var(--s3); }
+  .xp li { position: relative; padding-left: 20px; color: var(--muted); }
+  .xp li::before { content: ""; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; background: var(--ink); }
+  .xp .tags { margin-top: var(--s4); display: flex; flex-wrap: wrap; gap: var(--s2); }
+  .stat { font-family: var(--f-mono); font-weight: 700; color: var(--ink); }
+  .shot { border: var(--border); display: block; width: 100%; height: auto; }
+  .proj-num { font-family: var(--f-mono); font-weight: 700; font-size: var(--t-display); line-height: 1; letter-spacing: -0.04em; }
+  .skill-row { display: grid; grid-template-columns: 1fr auto; gap: 6px var(--s3); align-items: center; }
+  .skill-row .bar { grid-column: 1 / -1; }
+  .vs ul { margin-top: var(--s4); }
+  .contact-big { font-family: var(--f-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.03em; font-size: clamp(28px, 6vw, 64px); line-height: 1.05; word-break: break-word; }
+  .contact-big a:hover { color: #9DB1FF; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  @media (max-width: 640px) {
+    .xp { grid-template-columns: minmax(0, 1fr); gap: var(--s2); padding: var(--s5) 0; }
+    .xp .pos { font-size: var(--t-h2); }
+    .proof-row .v { font-size: var(--t-h3); }
+    .proof-card { box-shadow: 6px 6px 0 var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<header class="header"><div class="container">
+  <a class="logo" href="#top" aria-label="Nakul Chaturvedi home">
+    <svg viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" fill="#0B0B0C"/><rect x="5" y="16" width="4.5" height="7" fill="#fff"/><rect x="11.75" y="11" width="4.5" height="12" fill="#fff"/><rect x="18.5" y="5" width="4.5" height="18" fill="#2D50CD"/></svg>
+    <span>Nakul Chaturvedi</span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+  </nav>
+  <div class="header-actions">
+    <a class="btn btn-ghost btn-sm hide-m" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn btn-primary btn-sm hide-m" href="#contact">Let's talk</a>
+    <button class="icon-btn menu-btn" data-open-drawer aria-label="Open menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</div></header>
+
+<div class="drawer" id="drawer" aria-hidden="true"><div class="drawer-bg" data-close-drawer></div>
+  <div class="drawer-panel" role="dialog" aria-label="Menu">
+    <div class="row between mb2"><span class="label">Menu</span><button class="icon-btn" data-close-drawer aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
+    <a class="dl" href="#experience" data-close-drawer>Experience</a>
+    <a class="dl" href="#work" data-close-drawer>Work</a>
+    <a class="dl" href="#skills" data-close-drawer>Skills</a>
+    <a class="dl" href="#education" data-close-drawer>Education</a>
+    <a class="btn btn-primary btn-block mt3" href="#contact" data-close-drawer>Let's talk</a>
+    <a class="btn btn-block mt1" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero"><div class="container hero-grid">
+  <div class="stack-lg">
+    <span class="badge blue">Open to Business Analyst &amp; Product roles</span>
+    <h1 class="t-display">Ops brain.<br>Data hands.<br><span class="accent">Builder energy.</span></h1>
+    <p class="lead">I'm Nakul. NIT Surat grad who skipped the civil engineering track to work next to founders. I dig into funnels with SQL, build the dashboards teams actually open, and automate the boring stuff with n8n and AI. Now heading into Business Analyst work, with Product as the long game.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="#contact">Let's talk
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-lg" href="#work">See my work</a>
+    </div>
+    <div class="row t-sm muted" style="gap:var(--s5)">
+      <span>✓ Founder's office x3</span><span>✓ SQL · Power BI · n8n</span><span>✓ Mumbai, open to metros</span>
+    </div>
+  </div>
+
+  <div class="card card-lg proof-card">
+    <div class="card-head">
+      <span class="label muted">Live proof card</span>
+      <span class="badge dark">Verified on work</span>
+    </div>
+    <div class="t-h3">Nakul Chaturvedi</div>
+    <div class="t-sm muted mt1">B.Tech, NIT Surat · Founder's Office · Analytics &amp; Ops</div>
+
+    <div class="score mt3"><span class="num" data-count="30">30</span><span class="of">% lift</span></div>
+    <div class="label blue mt1">7-day activation · DhanXpert</div>
+
+    <div class="stack mt3">
+      <div class="label muted">Self-rated / 100</div>
+      <div class="skill-row"><span class="t-sm">SQL &amp; funnel analysis</span><span class="mono t-sm">95</span><div class="bar blue"><i style="width:95%"></i></div></div>
+      <div class="skill-row"><span class="t-sm">Dashboards (Power BI, HTML)</span><span class="mono t-sm">92</span><div class="bar"><i style="width:92%"></i></div></div>
+      <div class="skill-row"><span class="t-sm">AI automation (n8n, Claude API)</span><span class="mono t-sm">90</span><div class="bar"><i style="width:90%"></i></div></div>
+    </div>
+
+    <div class="proof-row mt3">
+      <div><div class="v">10k+</div><div class="t-xs muted">records in churn model</div></div>
+      <div><div class="v">~80%</div><div class="t-xs muted">churn model accuracy</div></div>
+      <div><div class="v">100+</div><div class="t-xs muted">vehicles on my dashboards</div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true"><div>
+  <span>30% activation lift · DhanXpert</span><span>Churn model · 10,000+ records</span><span>~15% less fleet downtime</span><span>BookMyShow partnership</span><span>Founder's office x3</span><span>Building Rank Culture</span><span>n8n + Claude automations</span>
+  <span>30% activation lift · DhanXpert</span><span>Churn model · 10,000+ records</span><span>~15% less fleet downtime</span><span>BookMyShow partnership</span><span>Founder's office x3</span><span>Building Rank Culture</span><span>n8n + Claude automations</span>
+</div></div>
+
+<!-- PAPER VS PROOF -->
+<section class="section"><div class="container">
+  <div class="sec-head"><div><div class="label muted">The short version</div><h2 class="t-h1 mt1">Paper vs proof</h2></div>
+    <p class="lead">My degree says one thing. My work says another. I'd rather be judged on the second.</p></div>
+  <div class="vs reveal">
+    <div>
+      <div class="label muted">What the paper says</div>
+      <ul>
+        <li><span>×</span>B.Tech in Civil Engineering</li>
+        <li><span>×</span>Campus placement in core engineering</li>
+        <li><span>×</span>15-week site internship on a villa township</li>
+        <li><span>×</span>"Not a CS grad"</li>
+      </ul>
+    </div>
+    <div>
+      <div class="label" style="color:#9DB1FF">What the work says</div>
+      <ul>
+        <li><span>✓</span>Moved 7-day activation 30% with SQL funnel work</li>
+        <li><span>✓</span>Shipped a churn prediction tool on the Claude API</li>
+        <li><span>✓</span>Built sales and content dashboards leadership uses daily</li>
+        <li><span>✓</span>Designed and shipped a full hiring platform prototype</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience"><div class="container">
+  <div class="sec-head"><div><div class="label muted">Experience</div><h2 class="t-h1 mt1">The leaderboard</h2></div>
+    <p class="lead">Most recent first. Every line is something I actually shipped.</p></div>
+
+  <div class="card">
+    <article class="xp reveal">
+      <div class="pos">#1</div>
+      <div>
+        <div class="row between"><h3 class="t-h3">Executive Assistant to the Founder</h3><span class="badge green">Recent</span></div>
+        <div class="t-sm muted">RK Mumbai Realtors · Real estate brokerage + media · Mumbai</div>
+        <ul>
+          <li>Ran cross-functional coordination across the brokerage and the content business, reporting straight to the founder.</li>
+          <li>Built HTML performance dashboards for the sales team and the media team, so numbers stopped living in WhatsApp threads.</li>
+          <li>Automated daily ops with Zapier and Google Apps Script, plus vendor evaluation, tool access and comms monitoring.</li>
+        </ul>
+        <div class="tags"><span class="chip">Zapier</span><span class="chip">Apps Script</span><span class="chip">Dashboards</span><span class="chip">Ops</span></div>
+      </div>
+    </article>
+
+    <article class="xp reveal">
+      <div class="pos">#2</div>
+      <div>
+        <div class="row between"><h3 class="t-h3">Founder's Office Intern</h3><span class="badge blue">Fintech</span></div>
+        <div class="t-sm muted">DhanXpert</div>
+        <ul>
+          <li>SQL-driven funnel analysis that pushed 7-day activation up <span class="stat">30%</span>.</li>
+          <li>Onboarded <span class="stat">30+</span> financial experts and brought in <span class="stat">100+</span> customers.</li>
+          <li>Built a churn prediction tool on the Claude API across <span class="stat">10k+</span> records at <span class="stat">~80%</span> accuracy.</li>
+          <li>Drafted the BookMyShow reward partnership and wrote Reel ad scripts for platform growth.</li>
+        </ul>
+        <div class="tags"><span class="chip">SQL</span><span class="chip">Claude API</span><span class="chip">Growth</span><span class="chip">Partnerships</span></div>
+      </div>
+    </article>
+
+    <article class="xp reveal">
+      <div class="pos">#3</div>
+      <div>
+        <div class="row between"><h3 class="t-h3">Founder's Office Intern</h3><span class="badge">Media</span></div>
+        <div class="t-sm muted">BeerBiceps · The Ranveer Show</div>
+        <ul>
+          <li>Ran guest and brand operations for one of India's biggest podcasts.</li>
+          <li>Worked on content strategy and multi-platform growth.</li>
+          <li>Handled creator partnerships and negotiations.</li>
+        </ul>
+        <div class="tags"><span class="chip">Brand ops</span><span class="chip">Content strategy</span><span class="chip">Negotiation</span></div>
+      </div>
+    </article>
+
+    <article class="xp reveal">
+      <div class="pos">#4</div>
+      <div>
+        <div class="row between"><h3 class="t-h3">Operations &amp; Analytics</h3><span class="badge amber">Gov + infra</span></div>
+        <div class="t-sm muted">S.P. Ventures · State Municipal Corporation</div>
+        <ul>
+          <li>Built Power BI dashboards tracking a fleet of <span class="stat">100+</span> vehicles.</li>
+          <li>Helped cut vehicle downtime by roughly <span class="stat">15%</span>.</li>
+        </ul>
+        <div class="tags"><span class="chip">Power BI</span><span class="chip">Fleet ops</span></div>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<!-- WORK -->
+<section class="section" id="work"><div class="container">
+  <div class="sec-head"><div><div class="label muted">Work</div><h2 class="t-h1 mt1">Things I built</h2></div>
+    <a class="link" href="https://github.com/nakulchaturvediwrk" target="_blank" rel="noopener">All on GitHub →</a></div>
+
+  <div class="card card-lg reveal">
+    <div class="grid g2" style="align-items:center;gap:var(--s7)">
+      <div class="stack">
+        <span class="badge live red">Building now</span>
+        <h3 class="t-h1">Rank Culture</h3>
+        <p class="lead">Whoever deserves it gets hired. A merit-first hiring platform for India's youth: compete in tournaments built from real work, earn a verified rank out of 1000, and get fast-tracked to interviews on proof, not degrees. This site borrows its design system.</p>
+        <div class="row"><span class="chip">Product thinking</span><span class="chip">Design system</span><span class="chip">HTML/CSS/JS</span><span class="chip">Vercel</span></div>
+        <div class="row mt2">
+          <a class="btn btn-primary" href="https://rank-culture.vercel.app" target="_blank" rel="noopener">Live prototype</a>
+          <a class="btn" href="https://github.com/nakulchaturvediwrk/rank-culture" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
+      <a href="https://rank-culture.vercel.app" target="_blank" rel="noopener"><img class="shot" src="assets/rank-culture.png" alt="Rank Culture homepage" width="1280" height="800" loading="lazy"></a>
+    </div>
+  </div>
+
+  <div class="grid g3 mt3">
+    <a class="card hover stack reveal" href="https://github.com/nakulchaturvediwrk/Customer-Churn-Business-Analytics-" target="_blank" rel="noopener">
+      <div class="proj-num">10k+</div>
+      <h3 class="t-h3">Customer churn analytics</h3>
+      <p class="t-sm muted">Churn drivers across 10,000+ customer records, a predictive model at ~80% accuracy, and KPI dashboards. SQL, Power BI, Claude API.</p>
+      <span class="link">View repo →</span>
+    </a>
+    <div class="card stack reveal">
+      <div class="proj-num">2</div>
+      <h3 class="t-h3">Team performance dashboards</h3>
+      <p class="t-sm muted">HTML dashboards for a sales team and a media team at RK Mumbai Realtors. One place to see who's hitting numbers, no spreadsheet digging.</p>
+      <span class="label muted">Internal · not public</span>
+    </div>
+    <div class="card dark stack reveal">
+      <div class="proj-num" style="color:#9DB1FF">n8n</div>
+      <h3 class="t-h3">AI ops automations</h3>
+      <p class="t-sm muted">n8n workflows that streamline day-to-day work, track results and give TLs, managers and leadership data-driven visibility.</p>
+      <span class="label" style="color:#9DB1FF">Running in production</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- SKILLS -->
+<section class="section" id="skills"><div class="container">
+  <div class="sec-head"><div><div class="label muted">Skills</div><h2 class="t-h1 mt1">The toolkit</h2></div>
+    <p class="lead">Grouped by what they help me do, not by how they look on a resume.</p></div>
+  <div class="grid g4">
+    <div class="card stack reveal"><div class="label blue">Analyse</div><h3 class="t-h3">Data &amp; analytics</h3>
+      <div class="row" style="gap:var(--s2)"><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Excel</span><span class="chip">Power Query</span></div></div>
+    <div class="card stack reveal"><div class="label blue">Show</div><h3 class="t-h3">Dashboards &amp; BI</h3>
+      <div class="row" style="gap:var(--s2)"><span class="chip">Power BI</span><span class="chip">Google Sheets</span><span class="chip">HTML dashboards</span></div></div>
+    <div class="card stack reveal"><div class="label blue">Automate</div><h3 class="t-h3">AI &amp; workflows</h3>
+      <div class="row" style="gap:var(--s2)"><span class="chip">n8n</span><span class="chip">Claude API</span><span class="chip">GPT APIs</span><span class="chip">Zapier</span><span class="chip">Apps Script</span><span class="chip">ElevenLabs</span></div></div>
+    <div class="card stack reveal"><div class="label blue">Run</div><h3 class="t-h3">Ops &amp; GTM</h3>
+      <div class="row" style="gap:var(--s2)"><span class="chip">HubSpot</span><span class="chip">Notion</span><span class="chip">Airtable</span><span class="chip">Apollo.io</span><span class="chip">Figma</span></div></div>
+  </div>
+</div></section>
+
+<!-- EDUCATION -->
+<section class="section" id="education"><div class="container">
+  <div class="sec-head"><div><div class="label muted">Education &amp; certs</div><h2 class="t-h1 mt1">Credentials</h2></div></div>
+  <div class="grid g2">
+    <div class="card card-lg stack reveal">
+      <div class="label muted">Degree</div>
+      <h3 class="t-h2">B.Tech, Civil Engineering</h3>
+      <p class="t-sm muted">Sardar Vallabhbhai National Institute of Technology (NIT Surat) · Class of 2026</p>
+      <p class="t-sm">Includes a 15-week industrial internship at Orilite Lifespaces, Kota, on the Central Avenue villa township.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>#</th><th>Certification</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-pos">01</td><td>HubSpot RevOps</td></tr>
+          <tr><td class="rank-pos">02</td><td>Lean Six Sigma</td></tr>
+          <tr><td class="rank-pos">03</td><td>Operations Management</td></tr>
+          <tr><td class="rank-pos">04</td><td>CFI Financial Analysis &amp; Modeling</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<!-- CONTACT / FOOTER -->
+<footer class="footer" id="contact"><div class="container">
+  <div class="stack-lg">
+    <span class="badge blue">Open to work</span>
+    <div class="contact-big">Got a messy problem?<br><span style="color:#9DB1FF">Let's rank it.</span></div>
+    <p class="t-body" style="color:#A9ABB5;max-width:56ch">Hiring for a Business Analyst, Product Analyst or APM role? Or just want to talk about Rank Culture? My inbox is open.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="mailto:nakulchaturvedi.work@gmail.com">Email me</a>
+      <a class="btn btn-lg" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-lg" href="https://github.com/nakulchaturvediwrk" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="base"><span>© 2026 Nakul Chaturvedi. Made in India.</span><span>Design system borrowed from <a href="https://rank-culture.vercel.app" style="color:#fff;text-decoration:underline">Rank Culture</a></span></div>
+</div></footer>
+
+<script>
+(function () {
+  var d = document.getElementById("drawer");
+  document.querySelectorAll("[data-open-drawer]").forEach(function (b) { b.addEventListener("click", function () { d.classList.add("open"); d.setAttribute("aria-hidden", "false"); }); });
+  document.querySelectorAll("[data-close-drawer]").forEach(function (b) { b.addEventListener("click", function () { d.classList.remove("open"); d.setAttribute("aria-hidden", "true"); }); });
+
+  // Reveal on scroll
+  var els = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  } else { els.forEach(function (el) { el.classList.add("in"); }); }
+
+  // Active nav on scroll
+  var links = document.querySelectorAll(".header .nav a");
+  var secs = Array.prototype.map.call(links, function (a) { return document.querySelector(a.getAttribute("href")); });
+  window.addEventListener("scroll", function () {
+    var y = window.scrollY + 120, cur = -1;
+    secs.forEach(function (s, i) { if (s && s.offsetTop <= y) cur = i; });
+    links.forEach(function (a, i) { a.classList.toggle("active", i === cur); });
+  }, { passive: true });
+
+  // Count-up on hero score
+  var n = document.querySelector("[data-count]");
+  if (n && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var end = +n.getAttribute("data-count"), t0 = null;
+    n.textContent = "0";
+    requestAnimationFrame(function step(t) { if (!t0) t0 = t; var p = Math.min((t - t0) / 900, 1); n.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); });
+  }
+})();
+</script>
+</body>
+</html>
