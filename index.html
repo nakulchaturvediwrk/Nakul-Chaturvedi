@@ -32,6 +32,13 @@
   .xp li { position: relative; padding-left: 20px; color: var(--muted); }
   .xp li::before { content: ""; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; background: var(--ink); }
   .xp .tags { margin-top: var(--s4); display: flex; flex-wrap: wrap; gap: var(--s2); }
+  .co a { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-color: var(--blue); }
+  .co a:hover { color: var(--blue); }
+  .cert { display: flex; flex-direction: column; gap: var(--s3); }
+  .cert .issuer { font-family: var(--f-display); font-weight: 700; font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .cert .num { font-family: var(--f-mono); font-weight: 700; font-size: var(--t-h2); line-height: 1; color: var(--blue); }
+  .cert .link { margin-top: auto; }
+  .cert:hover .num { animation: flipnum .4s steps(4); }
   .stat { font-family: var(--f-mono); font-weight: 700; color: var(--ink); }
   .shot { border: var(--border); display: block; width: 100%; height: auto; }
   .proj-num { font-family: var(--f-mono); font-weight: 700; font-size: var(--t-display); line-height: 1; letter-spacing: -0.04em; }
@@ -204,7 +211,7 @@
     <a href="#experience">Experience</a>
     <a href="#work">Work</a>
     <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
+    <a href="#certificates">Certificates</a>
   </nav>
   <div class="header-actions">
     <a class="btn btn-ghost btn-sm hide-m" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
@@ -219,7 +226,8 @@
     <a class="dl" href="#experience" data-close-drawer>Experience</a>
     <a class="dl" href="#work" data-close-drawer>Work</a>
     <a class="dl" href="#skills" data-close-drawer>Skills</a>
-    <a class="dl" href="#education" data-close-drawer>Education</a>
+    <a class="dl" href="#certificates" data-close-drawer>Certificates</a>
+    <a class="dl" href="#leadership" data-close-drawer>Leadership</a>
     <a class="btn btn-primary btn-block mt3" href="#contact" data-close-drawer>Let's talk</a>
     <a class="btn btn-block mt1" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
@@ -354,12 +362,12 @@
       <div class="pos">#2</div>
       <div>
         <div class="row between"><h3 class="t-h3">Founder's Office Intern</h3><span class="badge blue">Fintech</span></div>
-        <div class="t-sm muted">DhanXpert</div>
+        <div class="t-sm muted co"><a href="https://www.dhanxpert.com/" target="_blank" rel="noopener">DhanXpert</a> (Corefinexperts Global Technologies) · Pune · Feb – Apr 2026</div>
         <ul>
           <li>SQL-driven funnel analysis that pushed 7-day activation up <span class="stat">30%</span>.</li>
           <li>Onboarded <span class="stat">30+</span> financial experts and brought in <span class="stat">100+</span> customers.</li>
           <li>Built a churn prediction tool on the Claude API across <span class="stat">10k+</span> records at <span class="stat">~80%</span> accuracy.</li>
-          <li>Drafted the BookMyShow reward partnership and wrote Reel ad scripts for platform growth.</li>
+          <li>Closed 2 partnership deals including BookMyShow, and fixed onboarding leaks with root-cause analysis and sharper UX to cut time-to-value.</li>
         </ul>
         <div class="tags"><span class="chip">SQL</span><span class="chip">Claude API</span><span class="chip">Growth</span><span class="chip">Partnerships</span></div>
       </div>
@@ -369,10 +377,10 @@
       <div class="pos">#3</div>
       <div>
         <div class="row between"><h3 class="t-h3">Founder's Office Intern</h3><span class="badge">Media</span></div>
-        <div class="t-sm muted">BeerBiceps · The Ranveer Show</div>
+        <div class="t-sm muted">BeerBiceps · The Ranveer Show · Mumbai · May – Jun 2024</div>
         <ul>
-          <li>Ran guest and brand operations for one of India's biggest podcasts.</li>
-          <li>Worked on content strategy and multi-platform growth.</li>
+          <li>Owned end-to-end coordination for <span class="stat">10+</span> guests and brand collaborators: briefing, scheduling and post-production follow-up.</li>
+          <li>Supported content strategy and audience growth across YouTube, Instagram and Spotify.</li>
           <li>Handled creator partnerships and negotiations.</li>
         </ul>
         <div class="tags"><span class="chip">Brand ops</span><span class="chip">Content strategy</span><span class="chip">Negotiation</span></div>
@@ -382,11 +390,12 @@
     <article class="xp reveal">
       <div class="pos">#4</div>
       <div>
-        <div class="row between"><h3 class="t-h3">Operations &amp; Analytics</h3><span class="badge amber">Gov + infra</span></div>
-        <div class="t-sm muted">S.P. Ventures · State Municipal Corporation</div>
+        <div class="row between"><h3 class="t-h3">Founder's Office Intern · Ops &amp; Analytics</h3><span class="badge amber">Gov + infra</span></div>
+        <div class="t-sm muted co"><a href="https://www.sukhpalventures.com/" target="_blank" rel="noopener">S.P. Ventures</a> · State Municipal Corporation · Kota · Dec 2025 – Jan 2026</div>
         <ul>
           <li>Built Power BI dashboards tracking a fleet of <span class="stat">100+</span> vehicles.</li>
-          <li>Helped cut vehicle downtime by roughly <span class="stat">15%</span>.</li>
+          <li>Automated SQL + Power BI fleet monitoring that cut vehicle downtime by <span class="stat">15%</span>.</li>
+          <li>Contributed to a government-backed vehicle tracking app for real-time visibility.</li>
         </ul>
         <div class="tags"><span class="chip">Power BI</span><span class="chip">Fleet ops</span></div>
       </div>
@@ -415,7 +424,7 @@
     </div>
   </div>
 
-  <div class="grid g3 mt3">
+  <div class="grid g2 mt3">
     <a class="card hover stack reveal" href="https://github.com/nakulchaturvediwrk/Customer-Churn-Business-Analytics-" target="_blank" rel="noopener">
       <div class="proj-num">10k+</div>
       <h3 class="t-h3">Customer churn analytics</h3>
@@ -428,6 +437,12 @@
       <p class="t-sm muted">HTML dashboards for a sales team and a media team at RK Mumbai Realtors. One place to see who's hitting numbers, no spreadsheet digging.</p>
       <span class="label muted">Internal · not public</span>
     </div>
+    <a class="card hover stack reveal" href="https://github.com/nakulchaturvediwrk/data-analytics/tree/main" target="_blank" rel="noopener">
+      <div class="proj-num">40%</div>
+      <h3 class="t-h3">Vendor performance analytics</h3>
+      <p class="t-sm muted">Power BI dashboards on on-time delivery, lead-time variance and defect rate. Cut vendor evaluation time by 40%, flagged the bottom 12% of vendors, and drove a 15% lift in on-time deliveries.</p>
+      <span class="link">View repo →</span>
+    </a>
     <div class="card dark stack reveal">
       <div class="proj-num" style="color:#9DB1FF">n8n</div>
       <h3 class="t-h3">AI ops automations</h3>
@@ -455,25 +470,89 @@
 
 <!-- EDUCATION -->
 <section class="section" id="education"><div class="container">
-  <div class="sec-head"><div><div class="label muted">Education &amp; certs</div><h2 class="t-h1 mt1">Credentials</h2></div></div>
+  <div class="sec-head"><div><div class="label muted">Education</div><h2 class="t-h1 mt1">Credentials</h2></div></div>
   <div class="grid g2">
     <div class="card card-lg stack reveal">
-      <div class="label muted">Degree</div>
+      <div class="label muted">Degree · Nov 2022 – May 2026</div>
       <h3 class="t-h2">B.Tech, Civil Engineering</h3>
-      <p class="t-sm muted">Sardar Vallabhbhai National Institute of Technology (NIT Surat) · Class of 2026</p>
+      <p class="t-sm muted co"><a href="https://www.svnit.ac.in/" target="_blank" rel="noopener">Sardar Vallabhbhai National Institute of Technology (NIT Surat)</a></p>
       <p class="t-sm">Includes a 15-week industrial internship at Orilite Lifespaces, Kota, on the Central Avenue villa township.</p>
     </div>
-    <div class="table-wrap reveal">
-      <table>
-        <thead><tr><th>#</th><th>Certification</th></tr></thead>
-        <tbody>
-          <tr><td class="rank-pos">01</td><td>HubSpot RevOps</td></tr>
-          <tr><td class="rank-pos">02</td><td>Lean Six Sigma</td></tr>
-          <tr><td class="rank-pos">03</td><td>Operations Management</td></tr>
-          <tr><td class="rank-pos">04</td><td>CFI Financial Analysis &amp; Modeling</td></tr>
-        </tbody>
-      </table>
+    <div class="card card-lg stack reveal">
+      <div class="label muted">School · 2018 – 2021</div>
+      <h3 class="t-h2">Class 10 &amp; 12</h3>
+      <p class="t-sm muted co"><a href="https://navodaya.gov.in/nvs/nvs-school/KOTA/en/about_us/About-JNV/" target="_blank" rel="noopener">Jawahar Navodaya Vidyalaya, Kota</a></p>
+      <div class="row"><div class="kpi"><div class="v">94.4%</div><div class="t-xs muted">Class 10</div></div><div class="kpi" style="margin-left:var(--s6)"><div class="v">93.6%</div><div class="t-xs muted">Class 12</div></div></div>
     </div>
+  </div>
+</div></section>
+
+<!-- CERTIFICATES -->
+<section class="section" id="certificates"><div class="container">
+  <div class="sec-head"><div><div class="label muted">Certificates · synced from Notion</div><h2 class="t-h1 mt1">Proof, on file</h2></div>
+    <a class="btn btn-dark" href="https://www.notion.so/30506bd5730b801b8414f764b97221d6?v=30506bd5730b804f808e000c6fb90fd7" target="_blank" rel="noopener">Open my Notion library ↗</a></div>
+  <div class="grid g4">
+    <a class="card hover cert reveal" href="https://www.notion.so/Advanced-SQL-for-Data-Analytics-30506bd5730b80f98983c98abf98665f" target="_blank" rel="noopener">
+      <div class="row between"><span class="num">01</span><span class="issuer">DataCamp</span></div>
+      <h3 class="t-h3">Advanced SQL for Data Analytics</h3>
+      <span class="link">View certificate →</span>
+    </a>
+    <a class="card hover cert reveal" href="https://www.notion.so/Business-Analytics-and-Data-Visualization-with-Power-BI-30506bd5730b806d846ef6e74a9fb4dd" target="_blank" rel="noopener">
+      <div class="row between"><span class="num">02</span><span class="issuer">Microsoft</span></div>
+      <h3 class="t-h3">Business Analytics &amp; Data Visualization with Power BI</h3>
+      <span class="link">View certificate →</span>
+    </a>
+    <a class="card hover cert reveal" href="https://www.notion.so/Power-BI-Business-Intelligence-for-Beginners-to-Advance-d4fb51330c974b6b933d415c64a0e269" target="_blank" rel="noopener">
+      <div class="row between"><span class="num">03</span><span class="issuer">Udemy · Biztics</span></div>
+      <h3 class="t-h3">Power BI: Business Intelligence, Beginner to Advanced</h3>
+      <span class="link">View certificate →</span>
+    </a>
+    <a class="card hover cert reveal" href="https://www.notion.so/CFI-Financial-Analysis-and-Modeling-Professional-Certificate-7f93e20a2e5e4ba59b564e5cc6d59fbe" target="_blank" rel="noopener">
+      <div class="row between"><span class="num">04</span><span class="issuer">CFI · LinkedIn Learning</span></div>
+      <h3 class="t-h3">Financial Analysis &amp; Modeling Professional Certificate</h3>
+      <span class="link">View certificate →</span>
+    </a>
+    <a class="card hover cert reveal" href="https://www.notion.so/Six-Sigma-Black-Belt-5c862a4b7faf47cab0614969ebc1ede7" target="_blank" rel="noopener">
+      <div class="row between"><span class="num">05</span><span class="issuer">LinkedIn Learning</span></div>
+      <h3 class="t-h3">Six Sigma: Black Belt</h3>
+      <span class="link">View certificate →</span>
+    </a>
+    <a class="card hover cert reveal" href="https://www.notion.so/Operations-Management-Professional-Certificate-a0db8caf793146ad880b25cde86bbea8" target="_blank" rel="noopener">
+      <div class="row between"><span class="num">06</span><span class="issuer">Jack Welch Management Institute</span></div>
+      <h3 class="t-h3">Operations Management Professional Certificate</h3>
+      <span class="link">View certificate →</span>
+    </a>
+    <a class="card hover cert reveal" href="https://www.notion.so/HubSpot-Revenue-Operations-Certification-31506bd5730b8080b040e5caafb9796b" target="_blank" rel="noopener">
+      <div class="row between"><span class="num">07</span><span class="issuer">HubSpot Academy</span></div>
+      <h3 class="t-h3">HubSpot Revenue Operations Certification</h3>
+      <span class="link">View certificate →</span>
+    </a>
+    <a class="card blue cert reveal" href="https://www.notion.so/30506bd5730b801b8414f764b97221d6?v=30506bd5730b804f808e000c6fb90fd7" target="_blank" rel="noopener">
+      <span class="num" style="color:#fff">+</span>
+      <h3 class="t-h3">See the full library</h3>
+      <p class="t-sm muted">Every certificate with notes on what I learned, kept up to date in Notion.</p>
+      <span class="link" style="color:#fff">Open Notion →</span>
+    </a>
+  </div>
+</div></section>
+
+<!-- LEADERSHIP -->
+<section class="section" id="leadership"><div class="container">
+  <div class="sec-head"><div><div class="label muted">Leadership</div><h2 class="t-h1 mt1">Off the clock</h2></div>
+    <p class="lead">College fests taught me ops faster than any classroom did.</p></div>
+  <div class="grid g2">
+    <a class="card hover stack reveal" href="https://mindbendsvnit.in/" target="_blank" rel="noopener">
+      <div class="row between"><span class="label blue">Manager · Jul 2024 – May 2025</span><span class="badge dark">300+ teams</span></div>
+      <h3 class="t-h2">MINDBEND, SVNIT</h3>
+      <p class="t-sm muted">Managed 60+ executives and led Dalal Street, a live stock-trading event with 300+ teams. Ran logistics and student engagement, and secured sponsorship from StockGro.</p>
+      <span class="link">mindbendsvnit.in →</span>
+    </a>
+    <a class="card hover stack reveal" href="https://cevgroup.org/" target="_blank" rel="noopener">
+      <div class="row between"><span class="label blue">Head · Jun 2024 – May 2025</span><span class="badge blue">18k+ impressions</span></div>
+      <h3 class="t-h2">Cutting Edge Visionaries</h3>
+      <p class="t-sm muted">Ran a case study competition with 500 participants from IITs, NITs, IIMs and tier 1 and 2 colleges.</p>
+      <span class="link">cevgroup.org →</span>
+    </a>
   </div>
 </div></section>
 
