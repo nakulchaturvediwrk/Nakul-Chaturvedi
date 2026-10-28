@@ -233,8 +233,8 @@
     <a href="#certificates">Certificates</a>
   </nav>
   <div class="header-actions">
-    <a class="btn btn-ghost btn-sm hide-m" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn btn-sm hide-m" href="assets/Nakul_Chaturvedi_Resume.pdf" download="Nakul_Chaturvedi_Resume.pdf">Resume <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg></a>
+    <a class="btn btn-ghost btn-sm hide-m" data-href="linkedin" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn btn-sm hide-m" data-resume="download" href="assets/Nakul_Chaturvedi_Resume.pdf" download="Nakul_Chaturvedi_Resume.pdf">Resume <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg></a>
     <a class="btn btn-primary btn-sm hide-m" href="#contact">Let's talk</a>
     <button class="icon-btn menu-btn" data-open-drawer aria-label="Open menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
   </div>
@@ -250,7 +250,7 @@
     <a class="dl" href="#leadership" data-close-drawer>Leadership</a>
     <a class="dl" href="#resume" data-close-drawer>Resume</a>
     <a class="btn btn-primary btn-block mt3" href="#contact" data-close-drawer>Let's talk</a>
-    <a class="btn btn-block mt1" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn btn-block mt1" data-href="linkedin" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </div>
 
@@ -259,12 +259,12 @@
 <!-- HERO -->
 <section class="hero hero2"><div class="container hero-grid">
   <div class="hero-copy">
-    <span class="badge blue sm-pop" style="--d:0">● Open to Business Analyst &amp; Product roles</span>
+    <span class="badge blue sm-pop" style="--d:0" data-s="open_to">● Open to Business Analyst &amp; Product roles</span>
 
     <h1 class="t-display h-stack" aria-label="Ops brain. Data hands. Builder energy.">
-      <span class="drop" style="--d:1" aria-hidden="true">Ops brain.</span>
-      <span class="drop" style="--d:2" aria-hidden="true">Data hands.</span>
-      <span class="drop accent scribble-wrap" style="--d:3" aria-hidden="true">Builder energy.
+      <span class="drop" style="--d:1" aria-hidden="true" data-s="headline_1">Ops brain.</span>
+      <span class="drop" style="--d:2" aria-hidden="true" data-s="headline_2">Data hands.</span>
+      <span class="drop accent scribble-wrap" style="--d:3" aria-hidden="true" data-s="headline_3">Builder energy.
         <svg class="scribble" viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true">
           <path class="f1" d="M2 12 C 60 4, 120 16, 180 8 S 270 6, 298 11"/>
           <path class="f2" d="M3 10 C 70 15, 130 4, 190 11 S 268 13, 297 7"/>
@@ -285,15 +285,15 @@
       </span></span>
     </div>
 
-    <p class="lead drop" style="--d:5">I'm Nakul. NIT Surat grad who skipped the civil track to work next to founders. Now I run tech and ops at a real estate + influencer media company, and I'm heading into Business Analyst work with Product as the long game.</p>
+    <p class="lead drop" style="--d:5" data-s="intro">I'm Nakul. NIT Surat grad who skipped the civil track to work next to founders. Now I run tech and ops at a real estate + influencer media company, and I'm heading into Business Analyst work with Product as the long game.</p>
 
     <div class="row drop" style="--d:6">
       <a class="btn btn-primary btn-lg nudge" href="#contact">Let's talk
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-lg" href="assets/Nakul_Chaturvedi_Resume.pdf" download="Nakul_Chaturvedi_Resume.pdf">Download resume <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg></a>
+      <a class="btn btn-lg" data-resume="download" href="assets/Nakul_Chaturvedi_Resume.pdf" download="Nakul_Chaturvedi_Resume.pdf">Download resume <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg></a>
     </div>
 
-    <div class="hero-stats drop" style="--d:7">
+    <div class="hero-stats drop" style="--d:7" id="stats">
       <div><div class="v"><span data-count="30">30</span>%</div><div class="t-xs muted">activation lift</div></div>
       <div><div class="v"><span data-count="10">10</span>k+</div><div class="t-xs muted">rows in churn model</div></div>
       <div><div class="v"><span data-count="100">100</span>+</div><div class="t-xs muted">customers acquired</div></div>
@@ -303,7 +303,7 @@
   <div class="stage" aria-label="Photo of Nakul Chaturvedi">
     <div class="stage-block" aria-hidden="true"></div>
     <figure class="photo-frame">
-      <img src="assets/nakul.jpg" alt="Nakul Chaturvedi" width="400" height="400"
+      <img src="assets/nakul.jpg" data-photo alt="Nakul Chaturvedi" width="400" height="400"
            onerror="this.remove();document.querySelector('.photo-frame').classList.add('no-photo')">
       <div class="monogram" aria-hidden="true"><span>Nakul<br><em>Chaturvedi</em></span></div>
       <figcaption class="frame-tag"><span class="rec"></span>NAKUL_CHATURVEDI.JPG</figcaption>
@@ -327,7 +327,7 @@
 </section>
 
 <!-- MARQUEE -->
-<div class="marquee" aria-hidden="true"><div>
+<div class="marquee" aria-hidden="true"><div id="highlights">
   <span>30% activation lift · DhanXpert</span><span>Churn model · 10,000+ records</span><span>~15% less fleet downtime</span><span>BookMyShow partnership</span><span>Founder's office x3</span><span>Building Rank Culture</span><span>n8n + Claude automations</span>
   <span>30% activation lift · DhanXpert</span><span>Churn model · 10,000+ records</span><span>~15% less fleet downtime</span><span>BookMyShow partnership</span><span>Founder's office x3</span><span>Building Rank Culture</span><span>n8n + Claude automations</span>
 </div></div>
@@ -363,7 +363,7 @@
   <div class="sec-head"><div><div class="label muted">Experience</div><h2 class="t-h1 mt1">The leaderboard</h2></div>
     <p class="lead">Most recent first. Every line is something I actually shipped.</p></div>
 
-  <div class="card">
+  <div class="card" id="xp-list">
     <article class="xp reveal">
       <div class="pos">#1</div>
       <div>
@@ -445,7 +445,7 @@
     </div>
   </div>
 
-  <div class="grid g2 mt3">
+  <div class="grid g2 mt3" id="projects">
     <a class="card hover stack reveal" href="https://github.com/nakulchaturvediwrk/Customer-Churn-Business-Analytics-" target="_blank" rel="noopener">
       <div class="proj-num">10k+</div>
       <h3 class="t-h3">Customer churn analytics</h3>
@@ -511,8 +511,8 @@
 <!-- CERTIFICATES -->
 <section class="section" id="certificates"><div class="container">
   <div class="sec-head"><div><div class="label muted">Certificates · synced from Notion</div><h2 class="t-h1 mt1">Proof, on file</h2></div>
-    <a class="btn btn-dark" href="https://www.notion.so/30506bd5730b801b8414f764b97221d6?v=30506bd5730b804f808e000c6fb90fd7" target="_blank" rel="noopener">Open my Notion library ↗</a></div>
-  <div class="grid g4">
+    <a class="btn btn-dark" data-href="notion_certificates" href="https://www.notion.so/30506bd5730b801b8414f764b97221d6?v=30506bd5730b804f808e000c6fb90fd7" target="_blank" rel="noopener">Open my Notion library ↗</a></div>
+  <div class="grid g4" id="certs">
     <a class="card hover cert reveal" href="https://www.notion.so/Advanced-SQL-for-Data-Analytics-30506bd5730b80f98983c98abf98665f" target="_blank" rel="noopener">
       <span class="num">01</span>
       <span class="issuer" title="DataCamp">DataCamp</span>
@@ -555,7 +555,7 @@
       <h3 class="t-h3">HubSpot Revenue Operations Certification</h3>
       <span class="link">View certificate →</span>
     </a>
-    <a class="card blue cert reveal" href="https://www.notion.so/30506bd5730b801b8414f764b97221d6?v=30506bd5730b804f808e000c6fb90fd7" target="_blank" rel="noopener">
+    <a class="card blue cert reveal" data-href="notion_certificates" href="https://www.notion.so/30506bd5730b801b8414f764b97221d6?v=30506bd5730b804f808e000c6fb90fd7" target="_blank" rel="noopener">
       <span class="num" style="color:#fff">+</span>
       <span class="issuer" style="color:#D5DDFF">Notion</span>
       <h3 class="t-h3">See the full library</h3>
@@ -569,7 +569,7 @@
 <section class="section" id="leadership"><div class="container">
   <div class="sec-head"><div><div class="label muted">Leadership</div><h2 class="t-h1 mt1">Off the clock</h2></div>
     <p class="lead">College fests taught me ops faster than any classroom did.</p></div>
-  <div class="grid g2">
+  <div class="grid g2" id="lead">
     <a class="card hover stack reveal" href="https://mindbendsvnit.in/" target="_blank" rel="noopener">
       <div class="row between"><span class="label blue">Manager · Jul 2024 – May 2025</span><span class="badge dark">300+ members</span></div>
       <h3 class="t-h2">MINDBEND, SVNIT</h3>
@@ -598,8 +598,8 @@
         <li>Certifications, education and leadership</li>
       </ul>
       <div class="row mt2">
-        <a class="btn btn-primary btn-lg nudge-down" href="assets/Nakul_Chaturvedi_Resume.pdf" download="Nakul_Chaturvedi_Resume.pdf">Download PDF <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg></a>
-        <a class="btn btn-lg" href="assets/Nakul_Chaturvedi_Resume.pdf" target="_blank" rel="noopener">View in browser</a>
+        <a class="btn btn-primary btn-lg nudge-down" data-resume="download" href="assets/Nakul_Chaturvedi_Resume.pdf" download="Nakul_Chaturvedi_Resume.pdf">Download PDF <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg></a>
+        <a class="btn btn-lg" data-resume="view" href="assets/Nakul_Chaturvedi_Resume.pdf" target="_blank" rel="noopener">View in browser</a>
       </div>
     </div>
     <div aria-hidden="true">
@@ -620,12 +620,12 @@
   <div class="stack-lg">
     <span class="badge blue">Open to work</span>
     <div class="contact-big">Got a messy problem?<br><span style="color:#9DB1FF">Let's rank it.</span></div>
-    <p class="t-body" style="color:#A9ABB5;max-width:56ch">Hiring for a Business Analyst, Product Analyst or APM role? Or just want to talk about Rank Culture? My inbox is open.</p>
+    <p class="t-body" style="color:#A9ABB5;max-width:56ch" data-s="footer_text">Hiring for a Business Analyst, Product Analyst or APM role? Or just want to talk about Rank Culture? My inbox is open.</p>
     <div class="row">
-      <a class="btn btn-primary btn-lg" href="mailto:nakulchaturvedi.work@gmail.com">Email me</a>
-      <a class="btn btn-lg" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn btn-lg" href="https://github.com/nakulchaturvediwrk" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn btn-lg" href="assets/Nakul_Chaturvedi_Resume.pdf" download="Nakul_Chaturvedi_Resume.pdf">Resume <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg></a>
+      <a class="btn btn-primary btn-lg" data-mail href="mailto:nakulchaturvedi.work@gmail.com">Email me</a>
+      <a class="btn btn-lg" data-href="linkedin" href="https://www.linkedin.com/in/nakulchaturvediwork/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-lg" data-href="github" href="https://github.com/nakulchaturvediwrk" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-lg" data-resume="download" href="assets/Nakul_Chaturvedi_Resume.pdf" download="Nakul_Chaturvedi_Resume.pdf">Resume <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg></a>
     </div>
   </div>
   <div class="base"><span>© 2026 Nakul Chaturvedi. Made in India.</span><span>Design system borrowed from <a href="https://rank-culture.vercel.app" style="color:#fff;text-decoration:underline">Rank Culture</a></span></div>
@@ -686,5 +686,6 @@
   }
 })();
 </script>
+<script src="assets/content.js" defer></script>
 </body>
 </html>
